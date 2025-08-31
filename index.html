@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBuddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='favicon.jpg') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="StudyBuddy Logo" class="sidebar-logo">
+        <ul>
+            <li>Reset Thread</li>
+            <li>Dark Mode</li>
+            <li>OpenAI Discord</li>
+            <li>Learn More</li>
+            <li>Log out</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <h1>StudyBuddy</h1>
+
+        <!-- Chat box -->
+        <div class="chat-box" id="chat-box">
+            {% for role, msg in chat_history %}
+                <div class="message {{ role }}">
+                    <strong>{{ role.capitalize() }}:</strong> {{ msg }}
+                </div>
+            {% endfor %}
+            <!-- Anchor at the end -->
+            <a id="last"></a>
+        </div>
+
+        <!-- Input -->
+        <form method="POST" class="input-box" action="#last">
+            <input type="text" name="message" placeholder="Type your message here..." required>
+            <button type="submit">➤</button>
+        </form>
+    </div>
+</body>
+</html>
