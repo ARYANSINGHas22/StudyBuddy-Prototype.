@@ -3,15 +3,15 @@ Basic prototype chatbot to help students in there assignments and exam preparati
 # Folder Structure
 studybuddy-ai/
 │
-├── app.py                  # Main Flask app
+├── app.py                  
 │
 ├── templates/
-│   └── index.html          # Main HTML page for your chatbot
+│   └── index.html          
 │
 ├── static/
-│   ├── styles.css          # CSS stylesheet
-│   ├── logo.jpg            # Logo image
-│   └── favicon.jpg         # Favicon image
+│   ├── styles.css          
+│   ├── logo.jpg            
+│   └── favicon.jpg         
 │
-└── README.md               # Optional: project documentation
+└── README.md               
 
